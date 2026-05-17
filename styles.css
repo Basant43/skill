@@ -1061,10 +1061,17 @@ li::before {
   background: var(--charcoal);
 }
 
+.footer-nav {
+  display: grid;
+  gap: 12px;
+  justify-items: end;
+}
+
 .footer-links {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .footer-links a,
@@ -1075,6 +1082,16 @@ li::before {
 
 .footer-links a:hover {
   color: white;
+}
+
+.legal-links {
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.legal-links span {
+  color: var(--mint);
+  font-weight: 900;
 }
 
 .sub-hero {
@@ -1185,6 +1202,44 @@ li::before {
   margin-top: 22px;
 }
 
+.legal-page {
+  max-width: 940px;
+}
+
+.legal-brand {
+  display: inline-flex;
+  margin-bottom: 18px;
+  color: var(--ink);
+}
+
+.legal-brand .brand-mark {
+  color: white;
+  background: var(--charcoal);
+}
+
+.legal-card {
+  padding: 34px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.legal-card h1 {
+  color: var(--ink);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
+.legal-card h2 {
+  margin-top: 26px;
+  font-size: 1.35rem;
+}
+
+.legal-card p {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
 @media (max-width: 940px) {
   .hero-grid,
   .motion-showcase,
@@ -1281,6 +1336,12 @@ li::before {
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .footer-nav,
+  .footer-links {
+    justify-items: start;
+    justify-content: flex-start;
   }
 }
 
