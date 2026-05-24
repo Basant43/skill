@@ -34,6 +34,9 @@ const assistantClose = document.querySelector("#assistantClose");
 const assistantMessages = document.querySelector("#assistantMessages");
 const assistantForm = document.querySelector("#assistantForm");
 const assistantInput = document.querySelector("#assistantInput");
+const cursorGlow = document.querySelector("#cursorGlow");
+const themeToggle = document.querySelector("#themeToggle");
+const resumeUpload = document.querySelector("#resumeUpload");
 
 const regionData = {
   india: {
@@ -625,4 +628,42 @@ if (assistantForm) {
     addAssistantMessage(assistantReply(question), "bot");
     assistantInput.value = "";
   });
+}
+
+if (cursorGlow) {
+  window.addEventListener("pointermove", (event) => {
+    cursorGlow.style.transform = `translate(${event.clientX - 180}px, ${event.clientY - 180}px)`;
+  });
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+    themeToggle.textContent = document.body.classList.contains("light-mode") ? "Dark" : "Light";
+  });
+}
+
+if (resumeUpload) {
+  resumeUpload.addEventListener("change", () => {
+    const fileName = resumeUpload.files[0]?.name || "Resume selected";
+    const label = resumeUpload.closest(".upload-box")?.querySelector("span");
+    if (label) {
+      label.textContent = `${fileName} ready for future AI analysis`;
+    }
+  });
+}
+
+const revealItems = document.querySelectorAll(".reveal");
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.14 });
+  revealItems.forEach((item) => observer.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add("visible"));
 }

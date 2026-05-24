@@ -21,28 +21,23 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skillgapai.in/career.html?career=doctor&amp;level=beginner&amp;region=india&amp;goal=firstJob</loc>
+    <loc>https://skillgapai.in/privacy.html</loc>
     <lastmod>2026-05-18</lastmod>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://skillgapai.in/career.html?career=softwareDeveloper&amp;level=beginner&amp;region=india&amp;goal=firstJob</loc>
+    <loc>https://skillgapai.in/terms.html</loc>
     <lastmod>2026-05-18</lastmod>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://skillgapai.in/career.html?career=graphicDesigner&amp;level=beginner&amp;region=india&amp;goal=firstJob</loc>
+    <loc>https://skillgapai.in/disclaimer.html</loc>
     <lastmod>2026-05-18</lastmod>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://skillgapai.in/career.html?career=dataScientist&amp;level=beginner&amp;region=india&amp;goal=firstJob</loc>
+    <loc>https://skillgapai.in/refund.html</loc>
     <lastmod>2026-05-18</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skillgapai.in/career.html?career=plumber&amp;level=beginner&amp;region=india&amp;goal=firstJob</loc>
-    <lastmod>2026-05-18</lastmod>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
 </urlset>

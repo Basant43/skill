@@ -3,143 +3,113 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SkillGap AI | Industry Skill Intelligence</title>
-    <meta name="description" content="SkillGap AI helps students, job seekers, and career switchers find real industry skills, skill gaps, practical projects, and career roadmaps." />
+    <title>SkillGap AI | AI Career Intelligence Platform</title>
+    <meta name="description" content="SkillGap AI helps students, job seekers, freelancers, and career switchers analyze real industry skill gaps, salary opportunities, portfolio gaps, and personalized career roadmaps." />
+    <link rel="canonical" href="https://skillgapai.in/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <main class="app-shell">
-      <section class="hero-panel" id="home">
+  <body class="premium-home">
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <main class="site-shell">
+      <section class="premium-hero" id="home">
         <nav class="top-nav" aria-label="Main navigation">
           <a class="brand" href="#home" aria-label="SkillGap AI home">
             <span class="brand-mark">SG</span>
             <span>SkillGap AI</span>
           </a>
           <div class="nav-links">
-            <a href="#scanner">Scanner</a>
-            <a href="#signals">Signals</a>
-            <a href="report.html">Reports</a>
-            <a href="launch.html">Launch</a>
+            <a href="#scanner">Analyzer</a>
+            <a href="#features">Features</a>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
           </div>
+          <button class="mode-toggle" id="themeToggle" type="button">Light</button>
         </nav>
 
         <div class="hero-grid">
-          <section class="hero-copy" aria-label="SkillGap AI introduction">
-            <p class="eyebrow">Global career intelligence for job seekers</p>
-            <h1>Know the real skills companies want before you waste months learning the wrong things.</h1>
-            <p class="hero-text">SkillGap AI turns industry demand, salary direction, learning roadmaps, and practical project ideas into one clear path for students, job seekers, and career switchers.</p>
+          <section class="hero-copy reveal">
+            <p class="eyebrow">AI career intelligence for the global workforce</p>
+            <h1>Stop Learning Random Skills. Learn What The Market Actually Pays For.</h1>
+            <p class="hero-text">AI-powered career intelligence platform that analyzes skill demand, salary trends, portfolio gaps, and personalized learning roadmaps.</p>
             <div class="hero-actions">
-              <a class="primary-link" href="#scanner">Scan a career path</a>
-              <a class="secondary-link" href="report.html">View sample report</a>
+              <a class="primary-link" href="#scanner">Analyze My Career</a>
+              <a class="secondary-link" href="#dashboard">View AI Demo</a>
+            </div>
+            <div class="hero-proof">
+              <span>Built for students</span>
+              <span>Job seekers</span>
+              <span>Freelancers</span>
+              <span>Career switchers</span>
             </div>
           </section>
 
-          <section class="intelligence-board" aria-label="Skill intelligence summary">
-            <div class="holo-stack" aria-hidden="true">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div class="board-header">
-              <span>Live Skill Radar</span>
-              <strong id="radarScore">86%</strong>
-            </div>
-            <div class="signal-bars">
-              <span style="--level: 92%"></span>
-              <span style="--level: 71%"></span>
-              <span style="--level: 84%"></span>
-              <span style="--level: 63%"></span>
-              <span style="--level: 77%"></span>
-            </div>
-            <div class="insight-stack">
-              <p><strong>Trending:</strong> Portfolio proof, AI workflow, measurable outcomes</p>
-              <p><strong>Outdated:</strong> Generic certificates without projects</p>
-              <p><strong>Next refresh:</strong> Monthly AI market update</p>
-            </div>
+          <section class="dashboard-orbit reveal" aria-label="SkillGap AI dashboard preview">
+            <div class="orbit-ring ring-one"></div>
+            <div class="orbit-ring ring-two"></div>
+            <article class="glass-panel radar-panel">
+              <div class="panel-head">
+                <span>Career Match Score</span>
+                <strong id="radarScore">86%</strong>
+              </div>
+              <div class="radar-visual">
+                <span></span><span></span><span></span><span></span>
+                <b>AI</b>
+              </div>
+            </article>
+            <article class="glass-panel salary-card">
+              <span>Salary growth signal</span>
+              <strong>+42%</strong>
+              <div class="mini-chart"><i></i><i></i><i></i><i></i><i></i></div>
+            </article>
+            <article class="glass-panel heat-card">
+              <span>Skill heatmap</span>
+              <div class="heat-grid">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+            </article>
           </section>
         </div>
       </section>
 
-      <section class="motion-showcase" aria-label="SkillGap AI motion system">
-        <div class="motion-copy">
-          <p class="eyebrow">AI roadmap engine</p>
-          <h2>From confusing career advice to a clear action path.</h2>
-          <p>The scanner behaves like a roadmap generator: choose your field, level, and goal, then SkillGap AI creates the right next steps for your stage.</p>
-        </div>
-        <div class="motion-stage" aria-hidden="true">
-          <div class="depth-grid"></div>
-          <div class="orbit orbit-one"></div>
-          <div class="orbit orbit-two"></div>
-          <div class="motion-card card-a">Skill scan</div>
-          <div class="motion-card card-b">Gap map</div>
-          <div class="motion-card card-c">Portfolio proof</div>
-          <div class="motion-core">AI</div>
-        </div>
+      <section class="trust-strip reveal" aria-label="Platform statistics">
+        <article><strong>60+</strong><span>career paths mapped</span></article>
+        <article><strong>6</strong><span>major industry sectors</span></article>
+        <article><strong>90D</strong><span>roadmap engine</span></article>
+        <article><strong>AI</strong><span>skill-gap guidance</span></article>
       </section>
 
-      <section class="cred-strip" aria-label="Platform highlights">
-        <article>
-          <strong>6</strong>
-          <span>career paths for the first public version</span>
-        </article>
-        <article>
-          <strong>Global</strong>
-          <span>region-aware roadmap guidance</span>
-        </article>
-        <article>
-          <strong>3</strong>
-          <span>portfolio projects per career</span>
-        </article>
-        <article>
-          <strong>Monthly</strong>
-          <span>data refresh planned with AI</span>
-        </article>
-      </section>
-
-      <section class="problem-solution" aria-label="SkillGap AI mission">
-        <div>
-          <p class="eyebrow">The real problem</p>
-          <h2>People are learning hard, but not always learning what the market rewards.</h2>
+      <section class="problem-section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">The problem</p>
+          <h2>Most people are working hard on the wrong learning path.</h2>
         </div>
         <div class="problem-grid">
-          <article>
-            <h3>Course confusion</h3>
-            <p>Too many learners follow random courses without knowing if the skill is current, practical, or job-relevant.</p>
-          </article>
-          <article>
-            <h3>No proof</h3>
-            <p>Certificates alone do not show ability. Employers want projects, outcomes, and clear thinking.</p>
-          </article>
-          <article>
-            <h3>Market mismatch</h3>
-            <p>The same role can need different skills depending on region, salary goal, and career stage.</p>
-          </article>
+          <article><span>01</span><h3>Course confusion</h3><p>Too many options. No clear signal on what companies actually need.</p></article>
+          <article><span>02</span><h3>Outdated skills</h3><p>People spend months learning tools that are no longer market advantages.</p></article>
+          <article><span>03</span><h3>Certificate overload</h3><p>Certificates look good, but employers still ask for proof of work.</p></article>
+          <article><span>04</span><h3>No portfolio proof</h3><p>Learners need practical projects that prove judgment, not just effort.</p></article>
         </div>
       </section>
 
-      <section class="scanner" id="scanner">
+      <section class="scanner premium-card reveal" id="scanner">
         <div class="section-heading">
-          <p class="eyebrow">Skill gap scanner</p>
-          <h2>Pick a career path and get a focused industry roadmap.</h2>
+          <p class="eyebrow">AI skill gap analyzer</p>
+          <h2>Generate a career roadmap based on role, level, goal, and region.</h2>
         </div>
-
         <div class="scanner-grid">
           <form class="control-panel" id="careerForm">
             <label for="career">Career path</label>
-            <select id="career" name="career">
-              <option value="graphicDesigner">Graphic Designer</option>
-            </select>
-
+            <select id="career" name="career"><option value="graphicDesigner">Graphic Designer</option></select>
             <label for="level">Current level</label>
             <select id="level" name="level">
               <option value="beginner">Beginner</option>
               <option value="intermediate" selected>Intermediate</option>
               <option value="advanced">Advanced</option>
             </select>
-
             <label for="region">Target region</label>
             <select id="region" name="region">
               <option value="india" selected>India</option>
@@ -149,19 +119,17 @@
               <option value="canada">Canada</option>
               <option value="uae">UAE</option>
             </select>
-
             <label for="goal">Goal</label>
             <select id="goal" name="goal">
               <option value="firstJob">First job</option>
               <option value="betterSalary" selected>Better salary</option>
               <option value="freelance">Freelance clients</option>
             </select>
-
-            <button class="primary-button" type="submit">Generate roadmap</button>
-            <p class="form-note">Opens a detailed roadmap page for the selected career.</p>
+            <button class="primary-button" type="submit">Generate My AI Roadmap</button>
+            <p class="form-note">Opens a detailed AI roadmap page for the selected career.</p>
           </form>
 
-          <section class="result-panel" aria-live="polite">
+          <section class="result-panel">
             <div class="result-head">
               <div>
                 <p class="eyebrow">Industry snapshot</p>
@@ -169,182 +137,122 @@
               </div>
               <span id="demandBadge">High demand</span>
             </div>
-
             <div class="salary-band">
-              <span id="salaryLabel">Estimated salary range</span>
-              <strong id="salaryRange">INR 2.4L - 7.5L</strong>
+              <span id="salaryLabel">Estimated salary direction</span>
+              <strong id="salaryRange">INR 2.4L - 12L</strong>
               <p id="salaryNote">Higher range depends on portfolio quality, brand work, and digital production skills.</p>
             </div>
-
             <div class="skill-columns">
-              <div>
-                <h4>Must-have skills</h4>
-                <ul id="mustSkills"></ul>
-              </div>
-              <div>
-                <h4>Skill gaps to fix</h4>
-                <ul id="gapSkills"></ul>
-              </div>
+              <div><h4>Must-have skills</h4><ul id="mustSkills"></ul></div>
+              <div><h4>Skill gaps to fix</h4><ul id="gapSkills"></ul></div>
             </div>
           </section>
         </div>
       </section>
 
-      <section class="roadmap-section">
+      <section class="features-section reveal" id="features">
         <div class="section-heading">
-          <p class="eyebrow">Personal roadmap</p>
-          <h2 id="roadmapTitle">Your next 90 days</h2>
+          <p class="eyebrow">AI features</p>
+          <h2>Everything a career decision needs in one premium intelligence layer.</h2>
         </div>
-        <div class="roadmap" id="roadmap"></div>
+        <div class="feature-grid">
+          <article><h3>Resume Skill Scanner</h3><p>Find missing skill signals before applying.</p></article>
+          <article><h3>AI Career Roadmap</h3><p>Beginner, intermediate, and advanced action paths.</p></article>
+          <article><h3>Portfolio Project Generator</h3><p>Projects that prove real-world ability.</p></article>
+          <article><h3>Market Demand Analyzer</h3><p>Understand what is rising, stable, or declining.</p></article>
+          <article><h3>Salary Intelligence</h3><p>See direction by region and earning path.</p></article>
+          <article><h3>Career Match Score</h3><p>Know how close you are to market-ready.</p></article>
+          <article><h3>Skill Heatmap</h3><p>Separate must-learn skills from noise.</p></article>
+          <article><h3>AI Learning Recommendations</h3><p>Focus on practical proof, not random courses.</p></article>
+        </div>
       </section>
 
-      <section class="project-section" id="signals">
+      <section class="live-dashboard reveal" id="dashboard">
         <div class="section-heading">
-          <p class="eyebrow">Proof builders</p>
-          <h2>Projects that show employers you can do the work.</h2>
+          <p class="eyebrow">Live dashboard preview</p>
+          <h2>Market signals converted into career decisions.</h2>
         </div>
-        <div class="project-grid" id="projects"></div>
+        <div class="dashboard-grid">
+          <article class="metric-card"><span>Trending skills</span><strong>AI workflow</strong><div class="progress"><i style="width: 88%"></i></div></article>
+          <article class="metric-card"><span>Declining skills</span><strong>Generic certificates</strong><div class="progress danger"><i style="width: 62%"></i></div></article>
+          <article class="metric-card"><span>Remote growth</span><strong>+31%</strong><div class="progress"><i style="width: 74%"></i></div></article>
+          <article class="metric-card"><span>Automation impact</span><strong>High</strong><div class="progress purple"><i style="width: 81%"></i></div></article>
+          <article class="report-preview-card">
+            <p class="eyebrow">AI report preview</p>
+            <h3>Market Fit Score</h3>
+            <div class="score-ring"><span>88%</span><p>Ready with gaps</p></div>
+            <ul>
+              <li>Skill gaps detected</li>
+              <li>Salary direction mapped</li>
+              <li>Projects recommended</li>
+              <li>Interview readiness flagged</li>
+            </ul>
+          </article>
+        </div>
       </section>
 
-      <section class="report-preview" id="reports">
-        <div class="report-copy">
-          <p class="eyebrow">Career report preview</p>
-          <h2>Give job seekers a practical report, not random motivation.</h2>
-          <p>Every SkillGap AI report can explain what to learn, what to ignore, salary direction, portfolio proof, and the next action for the user.</p>
-          <div class="check-list">
-            <span>Skill demand summary</span>
-            <span>Outdated skill warning</span>
-            <span>Salary range and growth path</span>
-            <span>Portfolio project checklist</span>
-          </div>
+      <section class="upload-section reveal">
+        <div>
+          <p class="eyebrow">Extra tools</p>
+          <h2>Resume upload and LinkedIn analysis ready for the next product stage.</h2>
+          <p>These modules are designed as premium placeholders now. Later they can connect to a secure backend and real AI analysis.</p>
         </div>
-        <aside class="report-card" aria-label="Sample SkillGap AI report">
-          <div class="report-top">
-            <span>SkillGap AI Report</span>
-            <strong>UI/UX Designer</strong>
-          </div>
-          <div class="score-ring">
-            <span>88%</span>
-            <p>Market fit score</p>
-          </div>
-          <div class="report-line">
-            <span>Priority skill</span>
-            <strong>Design systems</strong>
-          </div>
-          <div class="report-line">
-            <span>Best proof</span>
-            <strong>Case study with usability test</strong>
-          </div>
-          <div class="report-line">
-            <span>Avoid</span>
-            <strong>Only watching tool tutorials</strong>
-          </div>
-        </aside>
+        <div class="upload-grid">
+          <label class="upload-box" for="resumeUpload"><span>Upload resume</span><input id="resumeUpload" type="file" /></label>
+          <article class="linkedin-box"><span>LinkedIn profile analysis</span><strong>Coming next</strong></article>
+        </div>
       </section>
 
-      <section class="audience-section">
+      <section class="testimonials-section reveal">
         <div class="section-heading">
-          <p class="eyebrow">Who it helps</p>
-          <h2>Built for people who need direction before they spend time and money.</h2>
+          <p class="eyebrow">Early user stories</p>
+          <h2>Designed for people who need clarity before spending months learning.</h2>
         </div>
-        <div class="audience-grid">
-          <article>
-            <h3>Students</h3>
-            <p>Understand which skills are actually useful before buying another course.</p>
-          </article>
-          <article>
-            <h3>Job seekers</h3>
-            <p>Build a portfolio around real hiring signals instead of guessing.</p>
-          </article>
-          <article>
-            <h3>Career switchers</h3>
-            <p>Find a clear 90-day path from current skill level to market-ready proof.</p>
-          </article>
+        <div class="testimonial-grid">
+          <article><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&q=80" alt="Student profile" /><p>"The roadmap made it clear what to build instead of just watching courses."</p><strong>Aarushi, student</strong></article>
+          <article><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80" alt="Job seeker profile" /><p>"I finally understood what my portfolio was missing for better jobs."</p><strong>Rohan, job seeker</strong></article>
+          <article><img src="https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?auto=format&fit=crop&w=160&q=80" alt="Freelancer profile" /><p>"The freelance earning paths helped me package my skills into an offer."</p><strong>Maya, freelancer</strong></article>
         </div>
       </section>
 
-      <section class="market-strip">
-        <article>
-          <strong>Market refresh</strong>
-          <span>Future versions can use AI to refresh job-skill signals by region and role.</span>
-        </article>
-        <article>
-          <strong>Region signals</strong>
-          <span>Roadmaps can shift for India, remote work, North America, the UK, Canada, and the UAE.</span>
-        </article>
-        <article>
-          <strong>Course filter</strong>
-          <span>Learn what to avoid before buying random courses.</span>
-        </article>
-      </section>
-
-      <section class="launch-panel" id="pricing">
-        <div>
-          <p class="eyebrow">Business model</p>
-          <h2>Start free. Sell detailed career reports later.</h2>
-          <p>Offer a free roadmap now, then add paid PDF reports, portfolio reviews, resume reviews, and monthly skill trend updates.</p>
+      <section class="pricing-section reveal" id="pricing">
+        <div class="section-heading">
+          <p class="eyebrow">Pricing</p>
+          <h2>Start free. Upgrade when you need deeper career intelligence.</h2>
         </div>
-        <a class="primary-link" href="launch.html">See launch plan</a>
-      </section>
-
-      <section class="waitlist-panel">
-        <div>
-          <p class="eyebrow">Launch plan</p>
-          <h2>Collect early users before building the full AI engine.</h2>
-          <p>Use this website to test interest. Later, connect forms, payments, AI updates, and downloadable reports.</p>
-        </div>
-        <form class="waitlist-form" action="mailto:hello@skillgap.ai" method="post" enctype="text/plain">
-          <label for="email">Early access email</label>
-          <div>
-            <input id="email" name="email" type="email" placeholder="your@email.com" />
-            <button class="primary-button" type="submit">Join waitlist</button>
-          </div>
-        </form>
-      </section>
-
-      <section class="contact-panel" id="contact">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2>Talk to SkillGap AI for career roadmap reports and collaboration.</h2>
-        </div>
-        <div class="contact-grid">
-          <article>
-            <span>Phone</span>
-            <a href="tel:+919818114438">+91 9818114438</a>
-          </article>
-          <article>
-            <span>Location</span>
-            <p>Najafgarh, New Delhi, Delhi 110043, India</p>
-          </article>
+        <div class="pricing-grid">
+          <article><span>Free</span><strong>Rs 0</strong><p>Career scanner, basic roadmap, skill gaps.</p><a href="#scanner">Start free</a></article>
+          <article class="featured"><span>Pro</span><strong>Rs 299</strong><p>Detailed AI roadmap report, portfolio projects, salary direction.</p><a href="#contact">Request report</a></article>
+          <article><span>Career Plus</span><strong>Rs 999</strong><p>Roadmap, portfolio review, resume guidance, and action plan.</p><a href="#contact">Contact us</a></article>
         </div>
       </section>
 
-      <section class="faq-section">
+      <section class="faq-section reveal">
         <div class="section-heading">
           <p class="eyebrow">FAQ</p>
-          <h2>Clear answers for first-time visitors.</h2>
+          <h2>Clear answers before you begin.</h2>
         </div>
         <div class="faq-grid">
-          <article>
-            <h3>Is this data live?</h3>
-            <p>This first version uses prepared sample data. The next version can connect AI and monthly market updates.</p>
-          </article>
-          <article>
-            <h3>Can users trust it?</h3>
-            <p>It should be positioned as career guidance, not a guaranteed job result. The value is clarity and direction.</p>
-          </article>
-          <article>
-            <h3>How can this earn?</h3>
-            <p>Start with free roadmaps, then sell detailed reports, portfolio reviews, and resume improvement services.</p>
-          </article>
+          <article><h3>Is this a job guarantee?</h3><p>No. SkillGap AI gives career guidance, skill direction, and project suggestions. It does not guarantee jobs or salary.</p></article>
+          <article><h3>Is the assistant real AI?</h3><p>The current website uses a built-in guidance engine. A secure AI backend can be added later.</p></article>
+          <article><h3>Can this work globally?</h3><p>Yes. The analyzer includes India, global remote, US, UK, Canada, and UAE guidance.</p></article>
+        </div>
+      </section>
+
+      <section class="contact-panel reveal" id="contact">
+        <div>
+          <p class="eyebrow">Final CTA</p>
+          <h2>Your Career Should Be Data-Driven.</h2>
+          <p>Talk to SkillGap AI for career roadmap reports, collaborations, or early access.</p>
+        </div>
+        <div class="contact-grid">
+          <article><span>Phone</span><a href="tel:+919818114438">+91 9818114438</a></article>
+          <article><span>Location</span><p>Najafgarh, New Delhi, Delhi 110043, India</p></article>
         </div>
       </section>
 
       <footer class="site-footer">
-        <a class="brand" href="#home" aria-label="SkillGap AI home">
-          <span class="brand-mark">SG</span>
-          <span>SkillGap AI</span>
-        </a>
+        <a class="brand" href="#home"><span class="brand-mark">SG</span><span>SkillGap AI</span></a>
         <div class="footer-nav">
           <div class="footer-links">
             <a href="career.html?career=graphicDesigner&level=intermediate&goal=betterSalary">Career roadmap</a>
@@ -352,7 +260,7 @@
             <a href="launch.html">Launch</a>
             <a href="#contact">Contact</a>
           </div>
-          <div class="footer-links legal-links" aria-label="Legal links">
+          <div class="footer-links legal-links">
             <span>Legal</span>
             <a href="privacy.html">Privacy Policy</a>
             <a href="terms.html">Terms</a>
@@ -367,11 +275,8 @@
       <button class="assistant-toggle" id="assistantToggle" type="button">Ask SkillGap AI</button>
       <div class="assistant-panel" id="assistantPanel">
         <div class="assistant-header">
-          <div>
-            <p class="eyebrow">AI assistant</p>
-            <strong>SkillGap Guide</strong>
-          </div>
-          <button id="assistantClose" type="button" aria-label="Close assistant">Close</button>
+          <div><p class="eyebrow">AI assistant</p><strong>SkillGap Guide</strong></div>
+          <button id="assistantClose" type="button">Close</button>
         </div>
         <div class="assistant-messages" id="assistantMessages"></div>
         <div class="assistant-prompts">
