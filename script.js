@@ -37,6 +37,8 @@ const assistantInput = document.querySelector("#assistantInput");
 const cursorGlow = document.querySelector("#cursorGlow");
 const themeToggle = document.querySelector("#themeToggle");
 const resumeUpload = document.querySelector("#resumeUpload");
+const roadmapFocusTitle = document.querySelector("#roadmapFocusTitle");
+const roadmapFocusText = document.querySelector("#roadmapFocusText");
 
 const regionData = {
   india: {
@@ -461,7 +463,9 @@ function updateCareer() {
   }
   salaryRange.textContent = profile.salary[region] || profile.salary.india;
   salaryNote.textContent = `${profile.note} ${selectedRegion.advice}`;
-  radarScore.textContent = profile.score;
+  if (radarScore) {
+    radarScore.textContent = profile.score;
+  }
   if (roadmapTitle) {
     roadmapTitle.textContent = `${levelBoost[level]} for ${profile.title}`;
   }
@@ -653,6 +657,37 @@ if (resumeUpload) {
   });
 }
 
+const stageCopy = {
+  gap: {
+    title: "Start with the gap",
+    text: "Before learning more, identify which missing skill is blocking your next career move."
+  },
+  learn: {
+    title: "Learn only what supports the next output",
+    text: "Focus your time on the tools, fundamentals, and practice that directly support your target role."
+  },
+  build: {
+    title: "Turn learning into proof",
+    text: "Create one visible project, case study, report, or portfolio piece that shows how you solve real problems."
+  },
+  apply: {
+    title: "Use proof in applications and interviews",
+    text: "Update your resume, prepare your story, and explain the decisions behind your work with confidence."
+  }
+};
+
+document.querySelectorAll("[data-stage]").forEach((stage) => {
+  stage.addEventListener("click", () => {
+    const copy = stageCopy[stage.dataset.stage] || stageCopy.gap;
+    document.querySelectorAll("[data-stage]").forEach((item) => item.classList.remove("active"));
+    stage.classList.add("active");
+    if (roadmapFocusTitle && roadmapFocusText) {
+      roadmapFocusTitle.textContent = copy.title;
+      roadmapFocusText.textContent = copy.text;
+    }
+  });
+});
+
 const revealItems = document.querySelectorAll(".reveal");
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver((entries) => {
@@ -666,4 +701,38 @@ if ("IntersectionObserver" in window) {
   revealItems.forEach((item) => observer.observe(item));
 } else {
   revealItems.forEach((item) => item.classList.add("visible"));
+}
+
+const counters = document.querySelectorAll("[data-count]");
+function animateCounter(item) {
+  const target = Number(item.dataset.count || "0");
+  const suffix = item.dataset.suffix || "+";
+  const duration = 1300;
+  const start = performance.now();
+
+  function update(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const value = Math.round(target * eased);
+    item.textContent = `${value.toLocaleString("en-IN")}${suffix}`;
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    }
+  }
+
+  requestAnimationFrame(update);
+}
+
+if ("IntersectionObserver" in window && counters.length) {
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  counters.forEach((counter) => counterObserver.observe(counter));
+} else {
+  counters.forEach(animateCounter);
 }

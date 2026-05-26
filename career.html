@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="app-shell">
+    <main class="app-shell career-page">
       <section class="sub-hero">
         <nav class="top-nav" aria-label="Main navigation">
           <a class="brand" href="index.html" aria-label="SkillGap AI home">
@@ -20,15 +20,32 @@
             <span>SkillGap AI</span>
           </a>
           <div class="nav-links">
-            <a href="index.html#scanner">Scanner</a>
+            <a href="index.html#assessment">Assessment</a>
             <a href="report.html">Reports</a>
             <a href="launch.html">Launch</a>
           </div>
         </nav>
-        <div class="sub-hero-content">
-          <p class="eyebrow">Generated career roadmap</p>
-          <h1 id="detailTitle">Career roadmap</h1>
-          <p id="detailIntro">A focused path from current skill level to portfolio-ready proof.</p>
+        <div class="sub-hero-content career-hero-grid">
+          <div>
+            <p class="eyebrow">Generated career roadmap</p>
+            <h1 id="detailTitle">Career roadmap</h1>
+            <p id="detailIntro">A focused path from current skill level to portfolio-ready proof.</p>
+          </div>
+          <aside class="career-score-board" aria-label="Career readiness dashboard">
+            <div class="score-row compact">
+              <div class="progress-ring" style="--score: 76"><span>76%</span></div>
+              <div>
+                <span>Readiness preview</span>
+                <strong>Portfolio proof needed</strong>
+                <p>Follow the roadmap stages below to move from learning to visible career proof.</p>
+              </div>
+            </div>
+            <div class="mini-metrics">
+              <article><span>Roadmap</span><strong>90 days</strong></article>
+              <article><span>Focus</span><strong>Projects</strong></article>
+              <article><span>Output</span><strong>Report</strong></article>
+            </div>
+          </aside>
         </div>
       </section>
 
@@ -72,6 +89,25 @@
           <p class="eyebrow">Step-by-step roadmap</p>
           <h2 id="detailRoadmapTitle">Your next 90 days</h2>
         </div>
+        <div class="roadmap-guide" aria-label="Roadmap stages">
+          <article class="active" data-stage="gap"><b>01</b><span>Discover gaps</span><p>Know what is missing for your target role.</p></article>
+          <article data-stage="learn"><b>02</b><span>Learn with purpose</span><p>Study only what supports the next project.</p></article>
+          <article data-stage="build"><b>03</b><span>Build proof</span><p>Create a portfolio asset that employers can judge.</p></article>
+          <article data-stage="apply"><b>04</b><span>Apply smarter</span><p>Use the roadmap output in resumes and interviews.</p></article>
+        </div>
+        <div class="roadmap-focus" aria-live="polite">
+          <div class="focus-visual">
+            <span class="focus-node one"></span>
+            <span class="focus-node two"></span>
+            <span class="focus-node three"></span>
+            <span class="focus-line"></span>
+          </div>
+          <div>
+            <p class="eyebrow">Current focus</p>
+            <h3 id="roadmapFocusTitle">Start with the gap</h3>
+            <p id="roadmapFocusText">Before learning more, identify which missing skill is blocking your next career move.</p>
+          </div>
+        </div>
         <div class="roadmap" id="roadmap"></div>
       </section>
 
@@ -87,6 +123,20 @@
         <div class="section-heading">
           <p class="eyebrow">Industry gap analyzer</p>
           <h2>What to do, what to avoid, and where the market is moving.</h2>
+        </div>
+        <div class="gap-meter" aria-label="Skill gap visualization">
+          <div>
+            <span>Current level</span>
+            <i style="--fill: 56%"></i>
+          </div>
+          <div>
+            <span>Industry required level</span>
+            <i style="--fill: 86%"></i>
+          </div>
+          <div>
+            <span>Portfolio proof</span>
+            <i style="--fill: 42%"></i>
+          </div>
         </div>
         <div class="analyzer-grid">
           <article>
