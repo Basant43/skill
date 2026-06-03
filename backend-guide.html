@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backend Guide | SkillGapAI</title>
+    <meta name="description" content="Simple guide for using SkillGapAI demo backend features and connecting a real database later." />
+    <link rel="canonical" href="https://skillgapai.in/backend-guide.html" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html"><span class="brand-mark">SG</span><span>SkillGapAI</span></a>
+      <nav class="nav-links"><a href="index.html">Home</a><a href="admin.html">Admin</a><a href="login.html">Login</a><a href="contact.html">Contact</a></nav>
+      <div class="header-actions"><a class="primary-button small" href="index.html#assessment">Start Assessment</a></div>
+    </header>
+    <main>
+      <section class="page-hero section-shell">
+        <p class="eyebrow">Simple guide</p>
+        <h1>How to use the SkillGapAI backend demo.</h1>
+        <p>This version can save enquiries and demo users into Supabase after you add your Project URL and anon public key. It also keeps a browser backup for testing.</p>
+      </section>
+      <section class="features-section section-shell">
+        <div class="feature-grid">
+          <article><h3>1. Run setup SQL</h3><p>Open Supabase, go to SQL Editor, paste supabase-setup.sql, and click Run.</p></article>
+          <article><h3>2. Copy safe keys</h3><p>Go to Project Settings, API, then copy Project URL and anon public key.</p></article>
+          <article><h3>3. Paste in config</h3><p>Open supabase-config.js and replace the two placeholder values. Never paste service role key.</p></article>
+          <article><h3>4. Upload files</h3><p>Upload index.html, login.html, admin.html, script.js, supabase-config.js, and supabase-setup.sql to GitHub.</p></article>
+          <article><h3>5. Test enquiry</h3><p>Fill the homepage enquiry form. It should save in Supabase and open WhatsApp.</p></article>
+          <article><h3>6. View database</h3><p>In Supabase Table Editor, open skillgap_enquiries or skillgap_demo_users.</p></article>
+          <article><h3>7. Demo admin</h3><p>Admin.html shows browser backup data. Use Supabase dashboard for real database records.</p></article>
+          <article><h3>8. Important safety</h3><p>Do not add database password or service role key to public website files.</p></article>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><div><a class="brand" href="index.html"><span class="brand-mark">SG</span><span>SkillGapAI</span></a><p>Backend guide for the current static website version.</p></div></footer>
+  </body>
+</html>

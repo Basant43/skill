@@ -34,8 +34,8 @@
       <section class="hero-section section-shell">
         <div class="hero-copy reveal">
           <p class="eyebrow">AI-powered career readiness platform</p>
-          <h1>Discover Your Skill Gaps. Build Your Career Roadmap with AI.</h1>
-          <p class="hero-text">SkillGapAI analyzes your current abilities, compares them with real industry expectations, and gives you a personalized path to become job-ready.</p>
+          <h1>Find Your Skill Gap. Get Your Career Roadmap.</h1>
+          <p class="hero-text">SkillGapAI shows what skills you are missing and what to learn next to become job-ready.</p>
           <div class="hero-actions">
             <a class="primary-button" href="#assessment">Start Free Assessment</a>
             <a class="secondary-button" href="#how">See How It Works</a>
@@ -242,12 +242,31 @@
         <div>
           <p class="eyebrow">Start now</p>
           <h2>Ready to find your skill gap?</h2>
-          <p>Get a roadmap built around your target role and start moving toward job readiness with clarity.</p>
+          <p>Send your details and get help with your roadmap, report, or college/employer enquiry.</p>
         </div>
         <a class="primary-button" href="#assessment">Start Your Free Assessment</a>
+        <form class="lead-form" id="leadForm">
+          <label for="leadName">Name</label>
+          <input id="leadName" name="name" type="text" placeholder="Your name" required />
+          <label for="leadPhone">Phone or WhatsApp</label>
+          <input id="leadPhone" name="phone" type="tel" placeholder="+91..." required />
+          <label for="leadEmail">Email</label>
+          <input id="leadEmail" name="email" type="email" placeholder="you@example.com" />
+          <label for="leadGoal">What do you need?</label>
+          <select id="leadGoal" name="goal">
+            <option value="Career roadmap">Career roadmap</option>
+            <option value="Paid report">Paid report</option>
+            <option value="College plan">College plan</option>
+            <option value="Employer enquiry">Employer enquiry</option>
+          </select>
+          <button class="primary-button" type="submit">Save and WhatsApp</button>
+          <p class="form-status" id="leadStatus">Your details will be saved in this browser and a WhatsApp message will open.</p>
+        </form>
         <div class="contact-grid">
           <article><span>Phone</span><a href="tel:+919818114438">+91 9818114438</a></article>
+          <article><span>WhatsApp</span><a href="https://wa.me/919818114438?text=Hi%20SkillGapAI%2C%20I%20want%20a%20career%20roadmap." target="_blank" rel="noopener">Message on WhatsApp</a></article>
           <article><span>Address</span><p>Najafgarh, New Delhi, Delhi 110043, India</p></article>
+          <article><span>Admin</span><a href="admin.html">View saved enquiries</a></article>
         </div>
       </section>
     </main>
@@ -271,6 +290,8 @@
         <form class="assistant-form" id="assistantForm"><input id="assistantInput" type="text" placeholder="Ask about skills, roadmap, AI, money..." autocomplete="off" /><button class="primary-button" type="submit">Send</button></form>
       </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

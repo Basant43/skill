@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | SkillGapAI</title>
+    <meta name="description" content="SkillGapAI local admin dashboard for saved enquiries, demo users, and report export." />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href="https://skillgapai.in/admin.html" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html"><span class="brand-mark">SG</span><span>SkillGapAI</span></a>
+      <nav class="nav-links"><a href="index.html">Home</a><a href="login.html">Login</a><a href="backend-guide.html">Backend guide</a><a href="contact.html">Contact</a></nav>
+      <div class="header-actions"><a class="primary-button small" href="index.html#contact">Add enquiry</a></div>
+    </header>
+    <main>
+      <section class="page-hero section-shell">
+        <p class="eyebrow">Local admin</p>
+        <h1>Saved enquiries and demo users.</h1>
+        <p>This dashboard reads data saved in this browser. It is useful for testing before connecting a real database.</p>
+      </section>
+      <section class="admin-section section-shell">
+        <div class="section-heading">
+          <p class="eyebrow">Reports</p>
+          <h2>Export or clear saved website data.</h2>
+        </div>
+        <div class="admin-actions">
+          <button class="primary-button" id="exportLeads" type="button">Download enquiries CSV</button>
+          <button class="secondary-button" id="exportUsers" type="button">Download users CSV</button>
+          <button class="secondary-button" id="clearDemoData" type="button">Clear demo data</button>
+        </div>
+        <div class="admin-grid">
+          <article>
+            <h3>Enquiries</h3>
+            <div class="data-list" id="leadList"></div>
+          </article>
+          <article>
+            <h3>Demo users</h3>
+            <div class="data-list" id="userList"></div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><div><a class="brand" href="index.html"><span class="brand-mark">SG</span><span>SkillGapAI</span></a><p>Local demo dashboard for testing only.</p></div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
