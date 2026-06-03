@@ -1,4 +1,4 @@
 window.SKILLGAP_SUPABASE = {
-  url: "PASTE_YOUR_SUPABASE_PROJECT_URL_HERE",
-  anonKey: "PASTE_YOUR_SUPABASE_ANON_PUBLIC_KEY_HERE"
+  url: "https://supabase.com/dashboard/project/agbcunobjjqgmizxeovl/settings/api-keys",
+  anonKey: "sb_publishable_ejNK3TycoCynIBW3vXLUaw_catZhAuo"
 };
